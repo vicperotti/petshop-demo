@@ -1,0 +1,8 @@
+ports:
+  - port: 3000
+    onOpen: ignore
+    visibility: public
+  - port: 4000
+    onOpen: ignore
+    # making this public so that we can benefit from apollo studio
+    visibility: public
