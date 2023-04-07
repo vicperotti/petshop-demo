@@ -5,7 +5,8 @@ import { ApolloClient, InMemoryCache, ApolloProvider,HttpLink, from } from "@apo
 import { onError } from "@apollo/client/link/error";
 
 const httpLink = new HttpLink({
-  uri: "http://localhost:4000"
+  uri: "https://4000-vicperotti-petshopdemo-kq7zy6eprl1.ws-us93.gitpod.io" //specific to my gitpod
+  //uri: "http://localhost:4000" //turn this one on for non-gitpod work
 });
 
 // Log any GraphQL errors or network error that occurred
