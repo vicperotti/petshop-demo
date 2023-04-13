@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Pets }  from './pets';
 import { AddPet} from './addPet';
 import { PetDetail } from './petDetail';
+import { UpdatePet } from './updatePet';
 
 export function Pages() {
   return (
@@ -13,6 +14,9 @@ export function Pages() {
         <Route element={<AddPet />} path="addPet" />
         <Route path="petDetail">
             <Route element={<PetDetail />} path=":id" />
+            <Route path="edit">
+              <Route element={<UpdatePet />} path=":id" />
+            </Route>
           </Route>
       </Routes>
     </BrowserRouter>

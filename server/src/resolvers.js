@@ -15,6 +15,13 @@ export const resolvers = {
                 success: true,
                 Errors:null
             };
+        },
+        updatePet: async(_, {id, input}) => {
+            await Pet.update({...input},{where:{id:id}});
+            return {
+                success: true,
+                Errors:null
+            };
         }
     }
 };
