@@ -34,6 +34,7 @@ input PetInput {
 
 type Mutation {
   addPet(input: PetInput!): BaseResponse
+  updatePet(id:ID!, input:PetInput!):BaseResponse
  }
 `;
 

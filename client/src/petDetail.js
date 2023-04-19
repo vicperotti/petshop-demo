@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { GET_PET } from "./queries";
 import Navbar from "./navbar";
 
@@ -26,6 +26,9 @@ export const PetDetail = () => {
         <Typography variant="h5">{pet.petname}</Typography><Typography>is a fun loving {pet.pettype} who loves to play!</Typography>
         <br></br>
         <Typography>You can take {pet.petname} home today for ${pet.petprice}!</Typography>
+        <Link to={`/petDetail/edit/${id}`} state={{petname: pet.petname, pettype:pet.pettype, petprice:pet.petprice, petphoto:pet.petphoto}}>
+          Edit
+        </Link>
       </Grid>
 
       <Grid item xs={2}>
